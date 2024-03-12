@@ -48,11 +48,11 @@ endfor:
 #}
 
 hanoi:
-	addi t0, zero, 1
-	bne a2, t0, else
-	lw t1, 0(a3)
-	sw zero, 0(a3) 	
-	sw t1 0(a5)
+	addi t0, zero, 1 
+	bne a2, t0, else  #if a2 != 1 saltamos a else
+	lw t1, 0(a3) #leemos el valor almacenado en la torre de origen
+	sw zero, 0(a3) 	#sobre escribimos el valor con 0
+	sw t1 0(a5) #lo cambiamos a la siguiente torre
 	jalr ra
 else:
 	#mas de dos discos
