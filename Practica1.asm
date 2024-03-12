@@ -18,11 +18,11 @@
 	add t1, t1, s1
 for:	#llenamos la torre inicial con los numeros 1-s0
 	bge zero, t0 endfor 
-	
+	#guardamos el numero en la posicion actual
 	sw t0, 0(t1)
-	addi t1, t1, 4
+	addi t1, t1, 4 #movemos el apuntador a la siguiente posicion
 	
-	addi t0, t0, -1
+	addi t0, t0, -1 #actualizamos t0
 	
 	jal for
 		
